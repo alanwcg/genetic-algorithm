@@ -31,7 +31,9 @@
         {
           "ts": "never"
         }
-      ]
+      ],
+      "no-param-reassign": "off",
+      "consistent-return": "off"
     },
     "settings": {
       "import/resolver": {
