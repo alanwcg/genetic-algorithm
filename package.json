@@ -6,7 +6,9 @@
   "scripts": {
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "genetic": "ts-node-dev src/algorithms/genetic.ts"
+    "genetic": "ts-node-dev src/algorithms/genetic.ts",
+    "ex1": "ts-node-dev src/classes/Exercise1.ts",
+    "test": "ts-node-dev src/classes/Individual.ts"
   },
   "dependencies": {
     "express": "^4.17.1",
