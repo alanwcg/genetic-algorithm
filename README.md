@@ -1,5 +1,3 @@
-# Alunos
+# Aluno
 
 **Alan Cintra**
-
-**Artur Ferreira**
