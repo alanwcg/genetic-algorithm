@@ -1,7 +1,9 @@
 import Individual from './Individual';
 import Population from './Population';
 
-class Exercise1 {
+// Comando para rodar algoritmo: yarn ex7
+
+class Exercise7 {
   population: Population = new Population();
 
   selectedIndividuals: Individual[] = [];
@@ -136,39 +138,40 @@ class Exercise1 {
   }
 }
 
-const ex1 = new Exercise1();
+const ex7 = new Exercise7();
 
-ex1.population.initializePopulation(0, 500, 9);
-ex1.population.calculateFitness();
+// Passar intervalo de x e tamanho do número binário
+ex7.population.initializePopulation(0, 300, 9);
+ex7.population.calculateFitness();
 
 console.log(
-  `Generation: ${ex1.generationCount} Fittest: ${ex1.population.fittest}`,
+  `Generation: ${ex7.generationCount} Fittest: ${ex7.population.fittest}`,
 );
 
-while (ex1.population.fittest > -8) {
-  ex1.generationCount++;
+while (ex7.population.fittest > 2) {
+  ex7.generationCount++;
 
-  ex1.selection();
+  ex7.selection();
 
-  ex1.crossover();
+  ex7.crossover();
 
-  ex1.mutation();
+  ex7.mutation();
 
-  ex1.population.calculateFitness();
+  ex7.population.calculateFitness();
 
   console.log(
-    `Generation: ${ex1.generationCount} Fittest: ${ex1.population.fittest}`,
+    `Generation: ${ex7.generationCount} Fittest: ${ex7.population.fittest}`,
   );
 }
 
-console.log(`Solution found in generation ${ex1.generationCount}`);
-console.log(`Fitness: ${ex1.population.getFittest().fitness}`);
+console.log(`Solution found in generation ${ex7.generationCount}`);
+console.log(`Fitness: ${ex7.population.getFittest().fitness}`);
 console.log('Genes:');
 
 let fittest = '';
 
-for (let i = 0; i < ex1.population.individuals[0].geneLength; i++) {
-  fittest += ex1.population.getFittest().genes[i];
+for (let i = 0; i < ex7.population.individuals[0].geneLength; i++) {
+  fittest += ex7.population.getFittest().genes[i];
 }
 
 console.log(fittest);

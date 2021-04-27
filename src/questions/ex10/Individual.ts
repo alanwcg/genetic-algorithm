@@ -40,12 +40,8 @@ class Individual {
 
   calcFitness(): void {
     const x = parseInt(this.genes.join(''), 2);
-    // this.fitness = x ** 2 - 3 * x + 4;
-    this.fitness = x ** 2 - 9 * x + 12;
+    this.fitness = x ** 2 - 18 * x + 24;
   }
 }
 
 export default Individual;
-
-// const i = new Individual(0, 200, 8);
-// i.calcFitness();
